@@ -1,0 +1,7 @@
+# Правила для поисковых роботов (Яндекс, Google).
+# Политика конфиденциальности — служебная страница, в поиск не попадает.
+User-agent: *
+Allow: /
+Disallow: /privacy.html
+
+Sitemap: https://ваш-домен.ru/sitemap.xml

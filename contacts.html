@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты | AI Studio</title>
+  <meta name="description" content="Свяжитесь с AI Studio. Готовы обсудить ваш проект — ответим в течение 24 часов.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="canonical" href="https://ваш-домен.ru/contacts.html"> 
+  <!-- OpenGraph: карточка сайта при отправке ссылки в Telegram/WhatsApp/ВК.
+       После регистрации домена заменить ваш-домен.ru и добавить og:image (картинка 1200x630). -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Контакты — AI Studio">
+  <meta property="og:description" content="Свяжитесь с AI Studio. Готовы обсудить ваш проект — ответим в течение 24 часов.">
+  <meta property="og:url" content="https://ваш-домен.ru/contacts.html">
+  <meta property="og:site_name" content="AI Studio">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-diamond"></span>
+      AI Studio
+    </a>
+    <ul class="nav__links">
+      <li><a href="efficiency.html">Эффективность</a></li>
+      <li><a href="security.html">Управление рисками</a></li>
+      <li><a href="about.html">О студии</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+    </ul>
+    <button class="btn btn--amber btn--sm" onclick="openQuiz('efficiency')">Бесплатный аудит</button>
+    <button class="nav__burger" id="navBurger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav__mobile" id="navMobile">
+  <ul>
+    <li><a href="efficiency.html">Эффективность</a></li>
+    <li><a href="security.html">Управление рисками</a></li>
+    <li><a href="about.html">О студии</a></li>
+    <li><a href="contacts.html">Контакты</a></li>
+  </ul>
+  <div class="nav__mobile-cta">
+    <button class="btn btn--amber" onclick="openQuiz('efficiency')">Бесплатный аудит</button>
+  </div>
+</div>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="page-hero__grid"></div>
+  <div class="container">
+    <p class="page-hero__label reveal">Контакты</p>
+    <h1 class="reveal reveal--d1">Готовы обсудить<br>ваш проект?</h1>
+    <p class="reveal reveal--d2">Оставьте заявку — мы свяжемся в течение 24 часов. Или напишите нам напрямую удобным способом.</p>
+  </div>
+</section>
+
+<!-- Contacts Section -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="contacts__inner">
+
+      <!-- Form -->
+      <div class="contacts__form-wrap">
+        <h2 class="section-title" style="font-size:1.8rem">Оставить заявку</h2>
+
+        <form class="contact-form" id="contactForm" onsubmit="submitContactForm(event)">
+          <!-- Honeypot: ловушка для спам-ботов. Человеку поле не видно (стили css .hp-field);
+               бот автозаполнит его — заявка молча отбросится на бэкенде. -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="hp-website">Сайт</label>
+            <input type="text" name="website" id="hp-website" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="form-field">
+            <label>Ваше имя *</label>
+            <input type="text" name="name" placeholder="Имя и фамилия" required>
+          </div>
+          <div class="form-field">
+            <label>Компания</label>
+            <input type="text" name="company" placeholder="Название компании">
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+            <div class="form-field">
+              <label>Email *</label>
+              <input type="email" name="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-field">
+              <label>Телефон</label>
+              <input type="tel" name="phone" placeholder="+7 (___) ___-__-__">
+            </div>
+          </div>
+          <div class="form-field">
+            <label>Чем занимается ваша компания</label>
+            <select name="industry">
+              <option value="">— Выберите сферу —</option>
+              <option>Производство</option>
+              <option>Торговля / опт</option>
+              <option>Логистика и дистрибуция</option>
+              <option>Услуги и B2B</option>
+              <option>Строительство</option>
+              <option>IT и технологии</option>
+              <option>Финансы</option>
+              <option>Другое</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>Кратко о задаче</label>
+            <textarea name="message" placeholder="Опишите, что вас беспокоит или какую задачу вы хотите решить. Это поможет нам подготовить более конкретный ответ."></textarea>
+          </div>
+          <div class="form-consent">
+            <input type="checkbox" id="formConsent" name="consent" required>
+            <label for="formConsent">Я согласен на обработку персональных данных в соответствии с <a href="privacy.html">Политикой конфиденциальности</a></label>
+          </div>
+          <button type="submit" class="btn btn--amber btn--lg" style="width:100%;justify-content:center">
+            Отправить заявку →
+          </button>
+        </form>
+
+        <div class="form-success" id="formSuccess">
+          <span class="form-success__icon">✅</span>
+          <h3>Заявка отправлена!</h3>
+          <p>Мы свяжемся с вами в течение 24 часов.</p>
+          <p style="margin-top:8px">Пока ждёте — пройдите бесплатный экспресс-аудит: за 5 минут получите карту рисков или возможностей автоматизации.</p>
+          <div style="display:flex;gap:12px;justify-content:center;margin-top:24px;flex-wrap:wrap">
+            <button class="btn btn--amber" onclick="openQuiz('efficiency')">🚀 Аудит эффективности</button>
+            <button class="btn btn--amber" onclick="openQuiz('security')">🛡️ Аудит рисков</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info card -->
+      <div class="contacts__info">
+        <div class="contacts__info-card">
+          <h3>Связаться напрямую</h3>
+
+          <a href="tel:+7XXXXXXXXXX" class="contact-detail" style="text-decoration:none;display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.05);transition:opacity 0.2s" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+            <div class="contact-detail__icon">📞</div>
+            <div class="contact-detail__text">
+              <small>Телефон</small>
+              <span>+7 (XXX) XXX-XX-XX</span>
+            </div>
+          </a>
+
+          <div class="contact-detail contact-detail--email">
+            <div class="contact-detail__icon">✉️</div>
+            <div class="contact-detail__text">
+              <small>Email</small>
+              <a href="mailto:expert@your-studio.ru" class="contact-detail__link">expert@your-studio.ru</a>
+            </div>
+            <button type="button" class="copy-btn" onclick="copyEmail(this, 'expert@your-studio.ru')">Скопировать</button>
+          </div>
+
+          <a href="https://t.me/your_studio" target="_blank" rel="noopener" class="contact-detail" style="text-decoration:none;display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.05);transition:opacity 0.2s" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+            <div class="contact-detail__icon">💬</div>
+            <div class="contact-detail__text">
+              <small>Telegram</small>
+              <span>@your_studio</span>
+            </div>
+          </a>
+
+          <div class="contacts__social">
+            <a href="https://t.me/your_studio" target="_blank" rel="noopener" class="social-btn">Telegram</a>
+            <a href="https://vk.com/your_studio" target="_blank" rel="noopener" class="social-btn">ВКонтакте</a>
+          </div>
+
+          <div style="margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.06)">
+            <p style="font-size:0.82rem;color:var(--muted-dark);margin-bottom:16px;text-transform:uppercase;letter-spacing:0.06em">Или пройдите аудит прямо сейчас</p>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <button class="btn btn--amber" onclick="openQuiz('efficiency')" style="justify-content:center">
+                🚀 Аудит эффективности
+              </button>
+              <button class="btn btn--amber" onclick="openQuiz('security')" style="justify-content:center">
+                🛡️ Аудит управления рисками
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section--mid">
+  <div class="container">
+    <h2 class="section-title text-center" style="margin-bottom:48px">Q&amp;A</h2>
+    <div style="max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:16px">
+
+      <div class="principle-item" style="flex-direction:column;gap:10px;align-items:flex-start">
+        <strong style="color:var(--cool-white);font-size:1rem">Как быстро вы отвечаете на заявки?</strong>
+        <p style="color:var(--muted);font-size:0.875rem;margin:0">В течение 24 часов в рабочие дни. Как правило — значительно быстрее. Срочные вопросы решаем в Telegram.</p>
+      </div>
+
+      <div class="principle-item" style="flex-direction:column;gap:10px;align-items:flex-start">
+        <strong style="color:var(--cool-white);font-size:1rem">С чего начинается работа?</strong>
+        <p style="color:var(--muted);font-size:0.875rem;margin:0">С бесплатного экспресс-аудита: вы проходите опросник на сайте, получаете персональный PDF-отчёт. Затем — консультация, где обсуждаем результаты и предлагаем конкретные решения.</p>
+      </div>
+
+      <div class="principle-item" style="flex-direction:column;gap:10px;align-items:flex-start">
+        <strong style="color:var(--cool-white);font-size:1rem">Вы работаете только с крупными компаниями?</strong>
+        <p style="color:var(--muted);font-size:0.875rem;margin:0">Нет, наш основной фокус — малый и средний бизнес (МСП) с оборотом от 50 млн до 500+ млн ₽ в год. Именно для таких компаний ИИ-автоматизация даёт наибольшую отдачу на вложения.</p>
+      </div>
+
+      <div class="principle-item" style="flex-direction:column;gap:10px;align-items:flex-start">
+        <strong style="color:var(--cool-white);font-size:1rem">Можно начать с одного решения, а не внедрять всё сразу?</strong>
+        <p style="color:var(--muted);font-size:0.875rem;margin:0">Именно так мы и работаем. Начинаем с одного ИИ-агента или процесса в ограниченном контуре — пилотный проект. Вы видите результат, потом решаете, как масштабировать.</p>
+      </div>
+
+      <div class="principle-item" style="flex-direction:column;gap:10px;align-items:flex-start">
+        <strong style="color:var(--cool-white);font-size:1rem">Вы даёте юридические гарантии соответствия законодательству?</strong>
+        <p style="color:var(--muted);font-size:0.875rem;margin:0">Нет. Мы не юристы и не технические аудиторы. Для юридически значимых заключений и технического аудита рекомендуем обращаться к профессиональным юристам и специалистам ИБ — мы готовы помочь с постановкой задачи для них.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo"><span class="nav__logo-diamond"></span>AI Studio</a>
+        <p>ИИ-решения для устойчивого роста вашего бизнеса. Экспертиза 25+ лет.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Направления</h4>
+        <ul>
+          <li><a href="efficiency.html">Эффективность</a></li>
+          <li><a href="security.html">Управление рисками</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Компания</h4>
+        <ul>
+          <li><a href="about.html">О студии</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="privacy.html">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+      <div class="footer__col footer__contacts">
+        <h4>Контакты</h4>
+        <p>📞 +7 (XXX) XXX-XX-XX</p>
+        <p>✉️ expert@your-studio.ru</p>
+        <div class="footer__social">
+          <a href="https://t.me/your_studio" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://vk.com/your_studio" target="_blank" rel="noopener">ВКонтакте</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__disclaimer">Материалы сайта носят информационный характер и не являются юридической или технической консультацией.</p>
+      <p class="footer__copy">Все права защищены. © 2025 AI Studio</p>
+    </div>
+  </div>
+</footer>
+
+<div class="quiz-modal" id="quizModal"></div>
+
+<div class="chatbot" id="chatbot">
+  <button class="chatbot__toggle" id="chatbotToggle" aria-label="Открыть чат с Антоном">
+    <span class="chatbot__pulse"></span>
+    <div class="chatbot__toggle-inner">
+      <div class="chatbot__bot-avatar">🤖</div>
+      <div class="chatbot__toggle-text">
+        <strong>Антон</strong>
+        <span>Спрашивайте, я готов Вам помочь!</span>
+      </div>
+    </div>
+    <span class="chatbot__icon--close">✕</span>
+  </button>
+  <div class="chatbot__window">
+    <div class="chatbot__header">
+      <div class="chatbot__avatar">А</div>
+      <div class="chatbot__meta">
+        <div class="chatbot__name">Антон</div>
+        <div class="chatbot__status">● Онлайн</div>
+      </div>
+      <button class="chatbot__x" onclick="toggleChatbot()">✕</button>
+    </div>
+    <div class="chatbot__messages" id="chatbotMessages">
+      <div class="chat-msg chat-msg--bot">
+        <div class="chat-bubble">Привет! Расскажите о вашей задаче — я помогу разобраться, с чего лучше начать.</div>
+      </div>
+    </div>
+    <div class="chatbot__input-row">
+      <input type="text" class="chatbot__input" id="chatbotInput" placeholder="Написать сообщение…">
+      <button class="chatbot__send" onclick="sendChat()">→</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js?v=4"></script>
+
+<!-- Яндекс.Метрика: подключить после размещения сайта в интернете.
+     1) создать счётчик на metrika.yandex.ru  2) вписать его ID ниже (3 раза XXXXXXXX)
+     3) убрать <!-- и -->  вокруг скрипта.
+     (Отправку ПДн в зарубежные сервисы мы не используем — Метрика только
+      обезличенная статистика; это учтено в privacy.html, раздел 7.) -->
+<!-- <script>
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  ym(XXXXXXXX, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:false });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/XXXXXXXX" style="position:absolute; left:-9999px;" alt=""></div></noscript> -->
+</body>
+</html>

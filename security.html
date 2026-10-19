@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Управление рисками бизнеса | AI Studio</title>
+  <meta name="description" content="Мониторинг контрагентов, проверка кандидатов, обучение персонала ИБ, реагирование на инциденты, защита персональных данных и коммерческой тайны. ИИ-агенты для безопасности МСП.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="canonical" href="https://ваш-домен.ru/security.html"> 
+  <!-- OpenGraph: карточка сайта при отправке ссылки в Telegram/WhatsApp/ВК.
+       После регистрации домена заменить ваш-домен.ru и добавить og:image (картинка 1200x630). -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Управление рисками бизнеса — AI Studio">
+  <meta property="og:description" content="Мониторинг контрагентов, проверка кандидатов, обучение персонала ИБ, реагирование на инциденты, защита персональных данных и коммерческой тайны. ИИ-агенты для безопасности МСП.">
+  <meta property="og:url" content="https://ваш-домен.ru/security.html">
+  <meta property="og:site_name" content="AI Studio">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-diamond"></span>
+      AI Studio
+    </a>
+    <ul class="nav__links">
+      <li><a href="efficiency.html">Эффективность</a></li>
+      <li><a href="security.html">Управление рисками</a></li>
+      <li><a href="about.html">О студии</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+    </ul>
+    <button class="btn btn--amber btn--sm" onclick="openQuiz('security')">Бесплатный аудит</button>
+    <button class="nav__burger" id="navBurger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav__mobile" id="navMobile">
+  <ul>
+    <li><a href="efficiency.html">Эффективность</a></li>
+    <li><a href="security.html">Управление рисками</a></li>
+    <li><a href="about.html">О студии</a></li>
+    <li><a href="contacts.html">Контакты</a></li>
+  </ul>
+  <div class="nav__mobile-cta">
+    <button class="btn btn--amber" onclick="openQuiz('security')">Пройти аудит</button>
+  </div>
+</div>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="page-hero__grid"></div>
+  <div class="container">
+    <p class="page-hero__label reveal">🛡️ Направление</p>
+    <h1 class="reveal reveal--d1">Управление рисками<br>вашего бизнеса</h1>
+    <p class="reveal reveal--d2">Выявляем и снижаем финансовые, кадровые, операционные и комплаенс-риски — защищая маржинальность бизнеса через выстроенные процессы, обучение людей и ИИ-автоматизацию.</p>
+    <button class="btn btn--amber btn--lg reveal reveal--d3" onclick="openQuiz('security')">
+      Пройти бесплатный аудит рисков
+    </button>
+  </div>
+</section>
+
+<!-- Services 3+3+1 grid -->
+<section class="section section--dark">
+  <div class="container">
+    <h2 class="section-title text-center reveal">7 направлений защиты<br>вашего бизнеса</h2>
+    <div class="services__grid">
+
+      <!-- Card 1 -->
+      <div class="service-card">
+        <span class="service-card__icon">🏢</span>
+        <h3>Мониторинг контрагентов</h3>
+        <p>Агент работает поверх вашей подписки на СПАРК или Контур.Фокус. Один предотвращённый невозврат дебиторки или срыв поставки напрямую сохраняет маржинальность сделки.</p>
+        <ul>
+          <li>Финансовые показатели, суды, исполнительные производства</li>
+          <li>Смена собственника, директора, юридического адреса</li>
+          <li>Уведомление при изменении рейтинга риска</li>
+          <li>Отчёт по новому контрагенту за 5 минут</li>
+        </ul>
+        <p class="service-card__note">Вы узнаёте о проблеме с контрагентом до того, как он перестаёт платить.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card">
+        <span class="service-card__icon">👥</span>
+        <h3>Проверка кандидатов и мониторинг рисков</h3>
+        <p>Комплексная проверка при найме: образование, деловая активность, открытые судебные и финансовые реестры. Периодическая перепроверка ключевых сотрудников.</p>
+        <ul>
+          <li>ФРДО (дипломы), ФССП (долги), деловая активность</li>
+          <li>Согласованная процедура с соблюдением 152-ФЗ</li>
+          <li>Только с письменного согласия проверяемого</li>
+          <li>Ежегодная перепроверка руководящих должностей</li>
+        </ul>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card">
+        <span class="service-card__icon">🎓</span>
+        <h3>Обучение персонала и осведомленность ИБ</h3>
+        <p>Вместо разовой лекции «под подпись» — регулярные короткие микро-тренинги и тестовые фишинговые рассылки.</p>
+        <ul>
+          <li>Персонализация: разбор именно своего сценария атаки</li>
+          <li>Контент под роль: продажи, бухгалтерия, склад, руководство</li>
+          <li>Геймификация и рейтинг осведомленности по отделам</li>
+          <li>Отчёт руководителю: где слабые места и динамика</li>
+        </ul>
+        <p class="service-card__note">Без культуры наказания. Цель — сформировать привычку, а не найти виноватого.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="service-card">
+        <span class="service-card__icon">🔐</span>
+        <h3>Снижение рисков с персональными данными</h3>
+        <p>Помощь в выстраивании процессов обработки ПД: политика на сайте, формы согласий, распределение ответственности, обучение сотрудников.</p>
+        <ul>
+          <li>Аудит текущего состояния обработки ПД</li>
+          <li>Обновление политик и форм согласий на сайте</li>
+          <li>Регулярная проверка на расхождения с требованиями 152-ФЗ</li>
+          <li>Ведение реестра операций обработки ПД</li>
+        </ul>
+        <p class="service-card__note">Мы не даём юридических гарантий соответствия. Для юридически значимых заключений рекомендуем обращаться к профессиональным юристам и специалистам ИБ.</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="service-card">
+        <span class="service-card__icon">📋</span>
+        <h3>Защита коммерческой информации</h3>
+        <p>Помогаем выстроить режим коммерческой тайны: перечень защищаемой информации, грифы, учёт доступа, соглашения с сотрудниками и контрагентами.</p>
+        <ul>
+          <li>Положение о КТ по закону № 98-ФЗ</li>
+          <li>Классификация документов и грифование</li>
+          <li>Контроль передачи конфиденциальной информации вовне</li>
+          <li>Обучение сотрудников работе с КТ</li>
+        </ul>
+      </div>
+
+      <!-- Card 6 - Placeholder for grid balance -->
+      <div class="service-card">
+        <span class="service-card__icon">🔒</span>
+        <h3>Контроль ИТ-периметра</h3>
+        <p>Мониторинг актуальности версий критического ПО, сроков действия SSL-сертификатов и корпоративных аккаунтов.</p>
+        <ul>
+          <li>Автоматические уведомления об истечении сертификатов</li>
+          <li>Чек-лист обновлений критического ПО</li>
+          <li>Контроль корпоративных аккаунтов и доступов</li>
+          <li>Мониторинг аномальной активности в ИТ-системах</li>
+        </ul>
+      </div>
+
+      <!-- Card 7 - Wide -->
+      <div class="service-card service-card--wide">
+        <span class="service-card__icon">🚨</span>
+        <div>
+          <h3>Процедура реагирования на инциденты ИБ</h3>
+          <p>Инцидент не должен превращаться в хаос. Мы выстраиваем понятную процедуру и автоматизируем её исполнение — чтобы первая реакция была правильной, а не стихийной.</p>
+          <ul>
+            <li>Единый канал приёма сообщений от сотрудников — чат-бот или форма, куда проще написать, чем звонить</li>
+            <li>Первичная классификация и сбор фактов по сценарию: что произошло, когда, где, с чем связано</li>
+            <li>Подсказка первых действий согласно утверждённому регламенту</li>
+            <li>Эскалация ответственным и руководителю при критичности события</li>
+            <li>Журнал инцидентов и разбор причин — чтобы одно и то же не повторялось</li>
+          </ul>
+          <p class="service-card__note">Важно: мы выстраиваем процедуру и коммуникацию. Это не замена технической команде реагирования (SOC/IR) и не услуга технического расследования.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- AI Section -->
+<section class="section section--mid">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center">
+      <div>
+        <h2 class="section-title" style="margin-bottom:24px">Контроль<br>использования<br>нейросетей</h2>
+        <p style="color:var(--muted);margin-bottom:20px;font-size:0.95rem">Сотрудники уже используют ИИ. Вопрос — как именно и какие данные они туда отправляют.</p>
+        <p style="color:var(--muted);margin-bottom:28px;font-size:0.95rem">Разрабатываем Политику использования ИИ и внедряем агента, который проверяет содержимое запросов перед отправкой в нейросеть, скрывает персональные данные и конфиденциальные фрагменты.</p>
+        <ul class="check-list" style="margin-bottom:32px">
+          <li><span class="check-list__icon">✓</span>Политика использования ИИ-инструментов</li>
+          <li><span class="check-list__icon">✓</span>Агент-фильтр перед отправкой данных в нейросеть</li>
+          <li><span class="check-list__icon">✓</span>Объяснение сотрудникам безопасных сценариев</li>
+          <li><span class="check-list__icon">✓</span>Корпоративные решения с контролем данных</li>
+        </ul>
+        <p style="font-size:0.85rem;color:var(--amber);font-style:italic">Результат: вы получаете преимущества ИИ, не теряя контроль над данными компании.</p>
+      </div>
+      <div style="background:var(--navy-card);border:1px solid var(--border-amber);border-radius:var(--radius);padding:40px;position:relative;overflow:hidden">
+        <div style="position:absolute;top:-20px;right:-20px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(200,146,42,0.12),transparent 70%)"></div>
+        <div style="font-size:3rem;margin-bottom:20px">🤖</div>
+        <div style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted-dark);margin-bottom:12px">Типичный сценарий без политики</div>
+        <div style="background:var(--navy);border-radius:8px;padding:16px;margin-bottom:16px;border-left:3px solid #e05050">
+          <p style="font-size:0.82rem;color:var(--muted)">Сотрудник копирует договор с данными клиента в ChatGPT для правки формулировок...</p>
+        </div>
+        <div style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted-dark);margin-bottom:12px">С нашей системой</div>
+        <div style="background:var(--navy);border-radius:8px;padding:16px;border-left:3px solid #4dca7a">
+          <p style="font-size:0.82rem;color:var(--muted)">Агент автоматически маскирует ФИО, реквизиты и конфиденциальные данные перед отправкой в LLM.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quiz CTA -->
+<section class="section cta-block">
+  <div class="container">
+    <div class="cta-block__inner">
+      <h2 class="reveal">Узнайте карту рисков<br>вашей компании</h2>
+      <p class="reveal reveal--d1">12 вопросов. 5 минут. Персональный PDF-отчёт с оценкой уровня рисков по 6 направлениям и конкретными рекомендациями.</p>
+      <div class="cta-block__buttons reveal reveal--d2">
+        <button class="btn btn--amber btn--lg" onclick="openQuiz('security')">
+          🛡️ Пройти аудит управления рисками
+        </button>
+        <a href="contacts.html" class="btn btn--outline btn--lg">Записаться на консультацию</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo"><span class="nav__logo-diamond"></span>AI Studio</a>
+        <p>ИИ-решения для устойчивого роста вашего бизнеса. Экспертиза 25+ лет.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Направления</h4>
+        <ul>
+          <li><a href="efficiency.html">Эффективность</a></li>
+          <li><a href="security.html">Управление рисками</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Компания</h4>
+        <ul>
+          <li><a href="about.html">О студии</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="privacy.html">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+      <div class="footer__col footer__contacts">
+        <h4>Контакты</h4>
+        <p>📞 +7 (XXX) XXX-XX-XX</p>
+        <p>✉️ expert@your-studio.ru</p>
+        <div class="footer__social">
+          <a href="https://t.me/your_studio" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://vk.com/your_studio" target="_blank" rel="noopener">ВКонтакте</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__disclaimer">Материалы сайта носят информационный характер и не являются юридической или технической консультацией.</p>
+      <p class="footer__copy">Все права защищены. © 2025 AI Studio</p>
+    </div>
+  </div>
+</footer>
+
+<div class="quiz-modal" id="quizModal"></div>
+
+<div class="chatbot" id="chatbot">
+  <button class="chatbot__toggle" id="chatbotToggle" aria-label="Открыть чат с Антоном">
+    <span class="chatbot__pulse"></span>
+    <div class="chatbot__toggle-inner">
+      <div class="chatbot__bot-avatar">🤖</div>
+      <div class="chatbot__toggle-text">
+        <strong>Антон</strong>
+        <span>Спрашивайте, я готов Вам помочь!</span>
+      </div>
+    </div>
+    <span class="chatbot__icon--close">✕</span>
+  </button>
+  <div class="chatbot__window">
+    <div class="chatbot__header">
+      <div class="chatbot__avatar">А</div>
+      <div class="chatbot__meta">
+        <div class="chatbot__name">Антон</div>
+        <div class="chatbot__status">● Онлайн</div>
+      </div>
+      <button class="chatbot__x" onclick="toggleChatbot()">✕</button>
+    </div>
+    <div class="chatbot__messages" id="chatbotMessages">
+      <div class="chat-msg chat-msg--bot">
+        <div class="chat-bubble">Хотите узнать, какие риски наиболее актуальны для вашего бизнеса? Расскажите о вашей компании или пройдите бесплатный аудит.</div>
+      </div>
+    </div>
+    <div class="chatbot__input-row">
+      <input type="text" class="chatbot__input" id="chatbotInput" placeholder="Написать сообщение…">
+      <button class="chatbot__send" onclick="sendChat()">→</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js?v=4"></script>
+
+<!-- Яндекс.Метрика: подключить после размещения сайта в интернете.
+     1) создать счётчик на metrika.yandex.ru  2) вписать его ID ниже (3 раза XXXXXXXX)
+     3) убрать <!-- и -->  вокруг скрипта.
+     (Отправку ПДн в зарубежные сервисы мы не используем — Метрика только
+      обезличенная статистика; это учтено в privacy.html, раздел 7.) -->
+<!-- <script>
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  ym(XXXXXXXX, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:false });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/XXXXXXXX" style="position:absolute; left:-9999px;" alt=""></div></noscript> -->
+</body>
+</html>

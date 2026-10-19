@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>{{ title }}</title>
+<style>
+  /* Брендированный PDF-шаблон. Шрифты: при деплое положить TTF в
+     fonts/ рядом с шаблоном (Cormorant Garamond + Jost) — см. README. */
+  @page {
+    size: A4;
+    margin: 22mm 18mm 20mm;
+    @bottom-center {
+      content: "AI Studio · Экспресс-аудит · {{ report_id }}";
+      font-family: Jost, sans-serif;
+      font-size: 7.5pt;
+      color: #7A96B0;
+    }
+  }
+  body {
+    font-family: Jost, Segoe UI, sans-serif;
+    font-size: 10pt;
+    line-height: 1.65;
+    color: #1b2a3a;
+  }
+  .cover {
+    text-align: left;
+    padding-bottom: 14mm;
+    border-bottom: 2.5pt solid #C8922A;
+    margin-bottom: 10mm;
+  }
+  .cover .studio {
+    letter-spacing: .18em;
+    font-size: 8pt;
+    text-transform: uppercase;
+    color: #C8922A;
+    margin-bottom: 5mm;
+  }
+  h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 19pt;
+    line-height: 1.25;
+    color: #0D1B2A;
+    margin: 0 0 4mm;
+  }
+  .cover .meta { color: #5d7185; font-size: 9pt; }
+  h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 14pt;
+    color: #0D1B2A;
+    border-left: 3pt solid #C8922A;
+    padding-left: 4mm;
+    margin: 8mm 0 3mm;
+    page-break-after: avoid;
+  }
+  h3 { font-size: 11pt; color: #0D1B2A; margin: 5mm 0 2mm; page-break-after: avoid; }
+  table { width: 100%; border-collapse: collapse; margin: 3mm 0; }
+  th, td { border: .5pt solid #c9d4e0; padding: 2mm 3mm; font-size: 9.5pt; text-align: left; }
+  th { background: #0D1B2A; color: #EDF1F6; }
+  ul, ol { padding-left: 6mm; }
+  li { margin-bottom: 1.5mm; }
+  strong { color: #0D1B2A; }
+  blockquote {
+    margin: 4mm 0; padding: 3mm 4mm;
+    background: #F6F1E8; border-left: 3pt solid #C8922A;
+  }
+  .disclaimer {
+    margin-top: 10mm; padding: 4mm;
+    background: #F2F5F8; border-radius: 2mm;
+    font-size: 8.5pt; color: #5d7185;
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="studio">AI STUDIO · ЭКСПРЕСС-АУДИТ</div>
+  <h1>{{ title }}</h1>
+  <div class="meta">
+    {% if client_name %}Подготовлено для: {{ client_name }} · {% endif %}
+    Дата: {{ date }}
+  </div>
+</div>
+
+{{ body }}
+
+<div class="disclaimer">
+  Настоящий отчёт носит информационно-рекомендательный характер и не является
+  юридическим заключением, техническим аудитом или гарантией результата.
+  Оценки эффекта основаны на предоставленных вами данных и типичных отраслевых
+  ориентирах. Для юридически значимых выводов обратитесь к профильным юристам.
+</div>
+
+</body>
+</html>

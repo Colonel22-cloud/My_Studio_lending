@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ИИ-автоматизация бизнес-процессов | AI Studio</title>
+  <meta name="description" content="Автоматизируйте рутину, повысьте конверсию продаж, ускорьте онбординг. ИИ-агенты для анализа звонков, обработки документов, чат-ботов и корпоративных баз знаний.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="canonical" href="https://ваш-домен.ru/efficiency.html"> 
+  <!-- OpenGraph: карточка сайта при отправке ссылки в Telegram/WhatsApp/ВК.
+       После регистрации домена заменить ваш-домен.ru и добавить og:image (картинка 1200x630). -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ИИ-автоматизация бизнес-процессов — AI Studio">
+  <meta property="og:description" content="Автоматизируйте рутину, повысьте конверсию продаж, ускорьте онбординг. ИИ-агенты для анализа звонков, обработки документов, чат-ботов и корпоративных баз знаний.">
+  <meta property="og:url" content="https://ваш-домен.ru/efficiency.html">
+  <meta property="og:site_name" content="AI Studio">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-diamond"></span>
+      AI Studio
+    </a>
+    <ul class="nav__links">
+      <li><a href="efficiency.html">Эффективность</a></li>
+      <li><a href="security.html">Управление рисками</a></li>
+      <li><a href="about.html">О студии</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+    </ul>
+    <button class="btn btn--amber btn--sm" onclick="openQuiz('efficiency')">Бесплатный аудит</button>
+    <button class="nav__burger" id="navBurger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav__mobile" id="navMobile">
+  <ul>
+    <li><a href="efficiency.html">Эффективность</a></li>
+    <li><a href="security.html">Управление рисками</a></li>
+    <li><a href="about.html">О студии</a></li>
+    <li><a href="contacts.html">Контакты</a></li>
+  </ul>
+  <div class="nav__mobile-cta">
+    <button class="btn btn--amber" onclick="openQuiz('efficiency')">Пройти аудит</button>
+  </div>
+</div>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="page-hero__grid"></div>
+  <div class="container">
+    <p class="page-hero__label reveal">🚀 Направление</p>
+    <h1 class="reveal reveal--d1">Ускорьте бизнес-процессы<br>с помощью ИИ</h1>
+    <p class="reveal reveal--d2">Автоматизируйте рутину, повысьте конверсию продаж и маржинальность, высвободите ресурсы команды для стратегических задач и роста.</p>
+    <button class="btn btn--amber btn--lg reveal reveal--d3" onclick="openQuiz('efficiency')">
+      Пройти бесплатный аудит эффективности
+    </button>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="section section--dark">
+  <div class="container">
+    <h2 class="section-title text-center reveal">Что мы автоматизируем</h2>
+    <div class="services__grid" style="grid-template-columns:1fr 1fr">
+
+      <div class="service-card">
+        <span class="service-card__icon">📞</span>
+        <h3>ИИ-анализ переговоров</h3>
+        <p>Транскрибация звонков и встреч, контроль скриптов, анализ поведения клиентов и автозаполнение CRM. Рост конверсии напрямую влияет на маржинальность — без увеличения штата.</p>
+        <ul>
+          <li>Автоматическое резюме каждого звонка</li>
+          <li>Выявление отклонений от скрипта в реальном времени</li>
+          <li>Аналитика по воронке продаж и менеджерам</li>
+          <li>Интеграция с amoCRM, Битрикс24</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <span class="service-card__icon">📄</span>
+        <h3>Обработка документов</h3>
+        <p>Автоматическое извлечение данных из счетов, актов, накладных, договоров. Снижает операционные издержки и напрямую повышает маржинальность за счёт сокращения ручного труда.</p>
+        <ul>
+          <li>Распознавание и структурирование данных (OCR + ИИ)</li>
+          <li>Автозапуск в 1С по входящему документу</li>
+          <li>Контроль расхождений и аномалий</li>
+          <li>Электронный архив с поиском по содержимому</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <span class="service-card__icon">💬</span>
+        <h3>Чат-боты для квалификации лидов</h3>
+        <p>Круглосуточная квалификация входящих лидов на сайте, в Telegram и ВКонтакте. Больше закрытых сделок при тех же расходах — прямой рост маржинальности.</p>
+        <ul>
+          <li>Ответы на типовые вопросы 24/7</li>
+          <li>Квалификация по параметрам (бюджет, сроки, задача)</li>
+          <li>Автоматическая запись на консультацию</li>
+          <li>Передача горячих лидов менеджеру с контекстом</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <span class="service-card__icon">📚</span>
+        <h3>Корпоративная база знаний</h3>
+        <p>ИИ-агент, который знает регламенты, продукты и скрипты вашей компании. Сокращает время онбординга и потери от ошибок новичков — повышая маржинальность каждого нового сотрудника.</p>
+        <ul>
+          <li>Ответы на вопросы сотрудников за секунды</li>
+          <li>Ускорение онбординга в 2–4 раза</li>
+          <li>Автообновление при изменении документов</li>
+          <li>Аналитика: что чаще всего спрашивают</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="section section--mid">
+  <div class="container">
+    <h2 class="section-title text-center reveal">Ответьте на 5 вопросов —<br>получите персональный отчёт</h2>
+    <p class="text-center reveal reveal--d1" style="color:var(--muted);margin-bottom:44px;max-width:520px;margin-left:auto;margin-right:auto;">
+      Оцените потенциал автоматизации в вашей компании. Получите PDF-отчёт с конкретными рекомендациями — бесплатно, за 5 минут.
+    </p>
+    <div style="text-align:center">
+      <button class="btn btn--amber btn--lg reveal reveal--d2" onclick="openQuiz('efficiency')">
+        🚀 Пройти аудит эффективности
+      </button>
+    </div>
+
+    <!-- Preview of questions -->
+    <div class="services__grid" style="margin-top:64px;grid-template-columns:1fr 1fr">
+      <div class="service-card">
+        <h3>Ручной ввод данных</h3>
+        <p>Сколько времени сотрудники тратят на перенос данных из документов в 1С или CRM?</p>
+      </div>
+      <div class="service-card">
+        <h3>Онбординг</h3>
+        <p>Как быстро новый сотрудник выходит на полную продуктивность?</p>
+      </div>
+      <div class="service-card">
+        <h3>Тендеры</h3>
+        <p>Участвуете в госзакупках? Как автоматизирована подготовка заявок?</p>
+      </div>
+      <div class="service-card">
+        <h3>Работа с CRM</h3>
+        <p>Насколько эффективно менеджеры ведут клиентскую базу?</p>
+      </div>
+      <div class="service-card" style="grid-column:1/-1">
+        <h3>Контроль поручений</h3>
+        <p>Как отслеживается исполнение задач и регламентов?</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta-block">
+  <div class="container">
+    <div class="cta-block__inner">
+      <h2 class="reveal">Хотите обсудить результаты<br>аудита с экспертом?</h2>
+      <p class="reveal reveal--d1">Запишитесь на бесплатную 15-минутную консультацию — разберём вашу ситуацию и предложим конкретный первый шаг.</p>
+      <div class="cta-block__buttons reveal reveal--d2">
+        <a href="contacts.html" class="btn btn--amber btn--lg">Записаться на консультацию</a>
+        <button class="btn btn--amber btn--lg" onclick="openQuiz('efficiency')">Сначала пройти аудит</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo"><span class="nav__logo-diamond"></span>AI Studio</a>
+        <p>ИИ-решения для устойчивого роста вашего бизнеса. Экспертиза 25+ лет.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Направления</h4>
+        <ul>
+          <li><a href="efficiency.html">Эффективность</a></li>
+          <li><a href="security.html">Управление рисками</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Компания</h4>
+        <ul>
+          <li><a href="about.html">О студии</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="privacy.html">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+      <div class="footer__col footer__contacts">
+        <h4>Контакты</h4>
+        <p>📞 +7 (XXX) XXX-XX-XX</p>
+        <p>✉️ expert@your-studio.ru</p>
+        <div class="footer__social">
+          <a href="https://t.me/your_studio" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://vk.com/your_studio" target="_blank" rel="noopener">ВКонтакте</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__disclaimer">Материалы сайта носят информационный характер и не являются юридической или технической консультацией.</p>
+      <p class="footer__copy">Все права защищены. © 2025 AI Studio</p>
+    </div>
+  </div>
+</footer>
+
+<div class="quiz-modal" id="quizModal"></div>
+
+<div class="chatbot" id="chatbot">
+  <button class="chatbot__toggle" id="chatbotToggle" aria-label="Открыть чат с Антоном">
+    <span class="chatbot__pulse"></span>
+    <div class="chatbot__toggle-inner">
+      <div class="chatbot__bot-avatar">🤖</div>
+      <div class="chatbot__toggle-text">
+        <strong>Антон</strong>
+        <span>Спрашивайте, я готов Вам помочь!</span>
+      </div>
+    </div>
+    <span class="chatbot__icon--close">✕</span>
+  </button>
+  <div class="chatbot__window">
+    <div class="chatbot__header">
+      <div class="chatbot__avatar">А</div>
+      <div class="chatbot__meta">
+        <div class="chatbot__name">Антон</div>
+        <div class="chatbot__status">● Онлайн</div>
+      </div>
+      <button class="chatbot__x" onclick="toggleChatbot()">✕</button>
+    </div>
+    <div class="chatbot__messages" id="chatbotMessages">
+      <div class="chat-msg chat-msg--bot">
+        <div class="chat-bubble">Интересуетесь автоматизацией? Расскажите, какие процессы в вашей компании занимают больше всего времени у сотрудников.</div>
+      </div>
+    </div>
+    <div class="chatbot__input-row">
+      <input type="text" class="chatbot__input" id="chatbotInput" placeholder="Написать сообщение…">
+      <button class="chatbot__send" onclick="sendChat()">→</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js?v=4"></script>
+
+<!-- Яндекс.Метрика: подключить после размещения сайта в интернете.
+     1) создать счётчик на metrika.yandex.ru  2) вписать его ID ниже (3 раза XXXXXXXX)
+     3) убрать <!-- и -->  вокруг скрипта.
+     (Отправку ПДн в зарубежные сервисы мы не используем — Метрика только
+      обезличенная статистика; это учтено в privacy.html, раздел 7.) -->
+<!-- <script>
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  ym(XXXXXXXX, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:false });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/XXXXXXXX" style="position:absolute; left:-9999px;" alt=""></div></noscript> -->
+</body>
+</html>

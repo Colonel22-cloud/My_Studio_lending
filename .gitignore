@@ -1,0 +1,24 @@
+# ===== Секреты (НЕ коммитить) =====
+backend/.env
+.env
+*.env.local
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# ===== Данные бэкенда (создаются при запуске) =====
+backend/data/aistudio.db
+backend/data/reports/
+*.db
+
+# ===== Служебное =====
+.Claude/
+shots/
+node_modules/
+.DS_Store
+Thumbs.db

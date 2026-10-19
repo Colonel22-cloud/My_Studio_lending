@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ИИ-студия для МСП | Автоматизация процессов и управление рисками</title>
+  <meta name="description" content="Автоматизируем бизнес-процессы и снижаем риски с помощью ИИ-агентов. Бесплатный экспресс-аудит за 5 минут. Экспертиза 25+ лет в российских и международных компаниях.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="canonical" href="https://ваш-домен.ru/"> 
+  <!-- OpenGraph: карточка сайта при отправке ссылки в Telegram/WhatsApp/ВК.
+       После регистрации домена заменить ваш-домен.ru и добавить og:image (картинка 1200x630). -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ИИ-студия для МСП — Автоматизация процессов и управление рисками">
+  <meta property="og:description" content="Автоматизируем бизнес-процессы и снижаем риски с помощью ИИ-агентов. Бесплатный экспресс-аудит за 5 минут. Экспертиза 25+ лет в российских и международных компаниях.">
+  <meta property="og:url" content="https://ваш-домен.ru/">
+  <meta property="og:site_name" content="AI Studio">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body>
+
+<!-- ===== Navigation ===== -->
+<nav class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo">
+      <span class="nav__logo-diamond"></span>
+      AI Studio
+    </a>
+    <ul class="nav__links">
+      <li><a href="efficiency.html">Эффективность</a></li>
+      <li><a href="security.html">Управление рисками</a></li>
+      <li><a href="about.html">О студии</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+    </ul>
+    <a href="#audit" class="btn btn--amber btn--sm">Бесплатный аудит</a>
+    <button class="nav__burger" id="navBurger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="nav__mobile" id="navMobile">
+  <ul>
+    <li><a href="efficiency.html">Эффективность</a></li>
+    <li><a href="security.html">Управление рисками</a></li>
+    <li><a href="about.html">О студии</a></li>
+    <li><a href="contacts.html">Контакты</a></li>
+  </ul>
+  <div class="nav__mobile-cta">
+    <a href="#audit" class="btn btn--amber">Бесплатный аудит</a>
+  </div>
+</div>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="hero__bg">
+    <div class="hero__grid"></div>
+    <div class="hero__orb hero__orb--1"></div>
+    <div class="hero__orb hero__orb--2"></div>
+  </div>
+  <div class="container hero__content">
+    <p class="hero__eyebrow reveal">ИИ-студия для бизнеса</p>
+    <h1 class="hero__title reveal reveal--d1">
+      Делаем ваш бизнес<br>
+      <em>быстрее, умнее</em><br>
+      и устойчивее с&nbsp;ИИ
+    </h1>
+    <p class="hero__sub reveal reveal--d2">
+      Автоматизируем рутину для роста выручки и маржинальности.<br>
+      Выстраиваем процессы, которые защищают от финансовых и операционных потерь.
+    </p>
+    <div class="hero__cta reveal reveal--d3" id="audit">
+      <button class="btn btn--amber btn--lg" onclick="openQuiz('efficiency')">
+        🚀 Аудит эффективности
+      </button>
+      <button class="btn btn--amber btn--lg" onclick="openQuiz('security')">
+        🛡️ Аудит управления рисками
+      </button>
+    </div>
+    <p class="hero__meta reveal reveal--d4">Экспертиза 25+ лет в российских и международных компаниях</p>
+  </div>
+  <div class="hero__scroll">
+    <span>Прокрутите</span>
+    <div class="hero__scroll-line"></div>
+  </div>
+</section>
+
+<!-- ===== Pain Points ===== -->
+<section class="section pain-points">
+  <div class="container">
+    <div class="pain-points__inner">
+      <div class="pain-points__side-label" aria-hidden="true">Знакомо?</div>
+      <div>
+        <p class="pain-points__intro">
+          Вы — собственник или руководитель растущей компании. Вы уже столкнулись с тем, что:
+        </p>
+        <ul class="pain-list">
+          <li class="pain-item">Менеджеры тонут в рутине вместо того, чтобы продавать</li>
+          <li class="pain-item">Контрагенты подводят: срывают поставки, исчезают с предоплатой, оказываются банкротами</li>
+          <li class="pain-item">Новые сотрудники месяцами не выходят на полную продуктивность</li>
+          <li class="pain-item">Вы не уверены, что сотрудники работают по стандартам, а клиенты получают лучший сервис</li>
+          <li class="pain-item">Обучение безопасности существует «для галочки» — сотрудники не понимают, как распознать угрозу</li>
+          <li class="pain-item">При инциденте нет понятной процедуры: каждый реагирует по-своему, вы узнаёте о проблеме последним</li>
+          <li class="pain-item">Персональные данные, коммерческая тайна, нейросети — зоны риска без уверенности</li>
+        </ul>
+        <p class="pain-points__outro">
+          Мы помогаем решать эти задачи системно — через выстроенные процессы, обучение людей и ИИ-автоматизацию.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Two Directions ===== -->
+<section class="section directions section--dark">
+  <div class="container">
+    <h2 class="section-title text-center reveal">
+      Два направления. Один результат —<br>
+      устойчивый рост вашего бизнеса.
+    </h2>
+    <div class="directions__grid">
+      <div class="direction-card direction-card--eff">
+        <span class="direction-card__icon">🚀</span>
+        <h3>Ускорение бизнес-процессов</h3>
+        <p>Автоматизируем рутину, повышаем конверсию и маржинальность, высвобождаем ресурсы команды для стратегических задач.</p>
+        <ul>
+          <li>ИИ-анализ звонков и контроль качества продаж</li>
+          <li>Автоматическая обработка документов (счета, акты)</li>
+          <li>Чат-боты для квалификации лидов на сайте</li>
+          <li>Корпоративная база знаний и онбординг</li>
+        </ul>
+        <a href="efficiency.html" class="btn btn--amber">Узнать про эффективность →</a>
+      </div>
+      <div class="direction-card direction-card--sec">
+        <span class="direction-card__icon">🛡️</span>
+        <h3>Управление рисками бизнеса</h3>
+        <p>Выявляем и снижаем финансовые, кадровые, операционные и комплаенс-риски — защищаем маржинальность через процессы, обучение и автоматизацию.</p>
+        <ul>
+          <li>Мониторинг контрагентов и Due Diligence</li>
+          <li>Проверка кандидатов и контроль внутренних рисков</li>
+          <li>Обучение персонала и повышение осведомленности в вопросах ИБ</li>
+          <li>Процедура реагирования на инциденты ИБ</li>
+          <li>Защита персональных данных и коммерческой тайны</li>
+          <li>Безопасное использование нейросетей</li>
+        </ul>
+        <a href="security.html" class="btn btn--amber">Узнать про управление рисками →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== About Brief ===== -->
+<section class="section about-brief">
+  <div class="container">
+    <div class="about-brief__inner">
+      <div class="about-brief__text">
+        <h2 class="section-title">Экспертиза,<br>упакованная<br>в ИИ-решения</h2>
+        <p>Студию основал эксперт с 25-летним опытом управления рисками безопасности в российских и международных компаниях — от среднего бизнеса до ведущих транснациональных корпораций.</p>
+        <p>Мы не продаём «ИИ ради ИИ». Мы переводим глубокие знания о реальных бизнес-рисках и узких местах в процессы, обучение и ИИ-агентов, которые работают 24/7.</p>
+        <ul class="check-list">
+          <li>
+            <span class="check-list__icon">✓</span>
+            Честно оцениваем риски — без выдуманных «страшилок»
+          </li>
+          <li>
+            <span class="check-list__icon">✓</span>
+            Предлагаем решения, которые окупаются на первом же предотвращённом инциденте
+          </li>
+          <li>
+            <span class="check-list__icon">✓</span>
+            Работаем на языке собственника: деньги, процессы, устойчивость
+          </li>
+        </ul>
+        <a href="about.html" class="btn btn--outline">Подробнее о студии →</a>
+      </div>
+      <div class="about-brief__visual">
+        <div class="about-brief__photo-frame">
+          <img src="Assets/IMG_20240917_144603~2.jpg" alt="Основатель студии"
+               class="about-brief__photo"
+               onerror="this.parentElement.innerHTML='<div class=\'about-brief__no-photo\'><span>👤</span><p>Фото основателя</p></div>'">
+        </div>
+        <div class="about-brief__stat">
+          <span class="stat-num">25+</span>
+          <span class="stat-label">лет экспертизы</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Process ===== -->
+<section class="section section--dark">
+  <div class="container">
+    <h2 class="section-title text-center reveal">Этапы реализации проекта</h2>
+    <div class="process__steps">
+      <div class="process__step">
+        <div class="process__num">01</div>
+        <h3>Бесплатный экспресс-аудит</h3>
+        <p>Вы проходите короткий опросник на сайте. Получаете персональный PDF-отчёт с картой рисков и возможностей автоматизации.</p>
+      </div>
+      <div class="process__arrow">→</div>
+      <div class="process__step">
+        <div class="process__num">02</div>
+        <h3>Консультация и дорожная карта</h3>
+        <p>Обсуждаем результаты аудита, подбираем оптимальное решение под ваши задачи и бюджет.</p>
+      </div>
+      <div class="process__arrow">→</div>
+      <div class="process__step">
+        <div class="process__num">03</div>
+        <h3>Пилотный проект</h3>
+        <p>Внедряем один ИИ-агент в ограниченном контуре. Вы видите измеримый результат до решения о масштабировании.</p>
+      </div>
+      <div class="process__arrow">→</div>
+      <div class="process__step">
+        <div class="process__num">04</div>
+        <h3>Масштабирование</h3>
+        <p>По мере роста доверия подключаем дополнительные агенты, выстраивая комплексную систему управления рисками и эффективностью.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Audience ===== -->
+<section class="section audience">
+  <div class="container">
+    <h2 class="section-title text-center reveal">Сферы бизнеса</h2>
+    <div class="audience__grid">
+      <div class="audience-card">
+        <span class="audience-card__icon">🏭</span>
+        <h3>Производство и опт</h3>
+        <p>Контроль поставщиков, защита коммерческой тайны, автоматизация документооборота и снижение рисков срыва поставок.</p>
+      </div>
+      <div class="audience-card">
+        <span class="audience-card__icon">🚚</span>
+        <h3>Логистика и дистрибуция</h3>
+        <p>Мониторинг контрагентов в реальном времени, снижение рисков срыва цепочек, контроль качества и выявление аномалий.</p>
+      </div>
+      <div class="audience-card">
+        <span class="audience-card__icon">💼</span>
+        <h3>Услуги и B2B</h3>
+        <p>Анализ качества продаж, быстрый онбординг, защита клиентской базы и персональных данных от утечек.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Principles ===== -->
+<section class="section section--dark">
+  <div class="container">
+    <h2 class="section-title reveal">Наши принципы</h2>
+    <div class="principles__grid">
+      <div class="principle-item">
+        <span class="principle-check">✓</span>
+        <div><strong>Честность.</strong> Мы не обещаем того, что не можем гарантировать.</div>
+      </div>
+      <div class="principle-item">
+        <span class="principle-check">✓</span>
+        <div><strong>Фокус на результате.</strong> Мы продаём снижение рисков и рост эффективности, а не «часы работы ИИ».</div>
+      </div>
+      <div class="principle-item">
+        <span class="principle-check">✓</span>
+        <div><strong>Прозрачность.</strong> Вы всегда понимаете, за что платите и какой результат получаете.</div>
+      </div>
+      <div class="principle-item">
+        <span class="principle-check">✓</span>
+        <div><strong>On-premise.</strong> Данные клиентов не покидают их контур без явного согласия.</div>
+      </div>
+      <div class="principle-item">
+        <span class="principle-check">✓</span>
+        <div><strong>Соответствие законодательству.</strong> Учитываем требования 152-ФЗ, закона о коммерческой тайне и других нормативных актов.</div>
+      </div>
+    </div>
+    <div class="principles__note">
+      ⚠️ <strong>Важно:</strong> Мы не юристы и не ИТ-интеграторы. Для юридически значимых заключений и технического аудита ИТ-инфраструктуры рекомендуем обращаться к профессиональным юристам и специалистам ИБ.
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA Block ===== -->
+<section class="section cta-block">
+  <div class="container">
+    <div class="cta-block__inner">
+      <h2 class="reveal">Начните с бесплатного<br>экспресс-аудита</h2>
+      <p class="reveal reveal--d1">
+        За 5 минут вы получите персональный отчёт: карту рисков и карту возможностей автоматизации — с конкретными рекомендациями.
+      </p>
+      <div class="cta-block__buttons reveal reveal--d2">
+        <button class="btn btn--amber btn--lg" onclick="openQuiz('efficiency')">
+          🚀 Аудит эффективности
+        </button>
+        <button class="btn btn--amber btn--lg" onclick="openQuiz('security')">
+          🛡️ Аудит управления рисками
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo">
+          <span class="nav__logo-diamond"></span>
+          AI Studio
+        </a>
+        <p>ИИ-решения для устойчивого роста вашего бизнеса. Экспертиза 25+ лет.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Направления</h4>
+        <ul>
+          <li><a href="efficiency.html">Эффективность</a></li>
+          <li><a href="security.html">Управление рисками</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Компания</h4>
+        <ul>
+          <li><a href="about.html">О студии</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="privacy.html">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+      <div class="footer__col footer__contacts">
+        <h4>Контакты</h4>
+        <p>📞 +7 (XXX) XXX-XX-XX</p>
+        <p>✉️ expert@your-studio.ru</p>
+        <div class="footer__social">
+          <a href="https://t.me/your_studio" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://vk.com/your_studio" target="_blank" rel="noopener">ВКонтакте</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__disclaimer">
+        Материалы сайта носят информационный характер и не являются юридической или технической консультацией.
+      </p>
+      <p class="footer__copy">Все права защищены. © 2025 AI Studio</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Quiz Modal -->
+<div class="quiz-modal" id="quizModal"></div>
+
+<!-- Chatbot Widget -->
+<div class="chatbot" id="chatbot">
+  <button class="chatbot__toggle" id="chatbotToggle" aria-label="Открыть чат с Антоном">
+    <span class="chatbot__pulse"></span>
+    <div class="chatbot__toggle-inner">
+      <div class="chatbot__bot-avatar">🤖</div>
+      <div class="chatbot__toggle-text">
+        <strong>Антон</strong>
+        <span>Спрашивайте, я готов Вам помочь!</span>
+      </div>
+    </div>
+    <span class="chatbot__icon--close">✕</span>
+  </button>
+  <div class="chatbot__window">
+    <div class="chatbot__header">
+      <div class="chatbot__avatar">А</div>
+      <div class="chatbot__meta">
+        <div class="chatbot__name">Антон</div>
+        <div class="chatbot__status">● Онлайн</div>
+      </div>
+      <button class="chatbot__x" onclick="toggleChatbot()">✕</button>
+    </div>
+    <div class="chatbot__messages" id="chatbotMessages">
+      <div class="chat-msg chat-msg--bot">
+        <div class="chat-bubble">Привет! Я помогу разобраться, какое решение подойдёт вашему бизнесу. Расскажите, с какой задачей вы столкнулись?</div>
+      </div>
+    </div>
+    <div class="chatbot__input-row">
+      <input type="text" class="chatbot__input" id="chatbotInput" placeholder="Написать сообщение…">
+      <button class="chatbot__send" onclick="sendChat()">→</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js?v=4"></script>
+
+<!-- Яндекс.Метрика: подключить после размещения сайта в интернете.
+     1) создать счётчик на metrika.yandex.ru  2) вписать его ID ниже (3 раза XXXXXXXX)
+     3) убрать <!-- и -->  вокруг скрипта.
+     (Отправку ПДн в зарубежные сервисы мы не используем — Метрика только
+      обезличенная статистика; это учтено в privacy.html, раздел 7.) -->
+<!-- <script>
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  ym(XXXXXXXX, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:false });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/XXXXXXXX" style="position:absolute; left:-9999px;" alt=""></div></noscript> -->
+</body>
+</html>
