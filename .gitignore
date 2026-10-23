@@ -18,6 +18,9 @@ backend/data/reports/
 
 # ===== Служебное =====
 .Claude/
+# но скиллы проекта коммитим (работа Claude Code в репо)
+!.claude/
+.claude/skills/*/shot*.png
 shots/
 node_modules/
 .DS_Store

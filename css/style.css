@@ -963,6 +963,24 @@ p  { line-height: 1.75; }
 .founder__text h2 { margin-bottom: 28px; }
 .founder__text p  { color: var(--muted); font-size: 0.95rem; margin-bottom: 20px; }
 .founder__text p strong { color: var(--text-light); }
+.founder__name {
+  color: var(--text-light);
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-style: italic;
+  margin: -18px 0 20px;
+}
+.founder__name .founder__link {
+  font-weight: 400;
+  color: var(--muted);
+  word-break: break-all;
+}
+.founder__name .founder__link a {
+  color: var(--amber);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.founder__name .founder__link a:hover { color: var(--text-light); }
 
 .approach-grid {
   display: grid;
