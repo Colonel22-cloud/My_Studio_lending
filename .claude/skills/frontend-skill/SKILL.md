@@ -1,42 +1,80 @@
 ---
 name: frontend-design
-description: Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, or applications. Generates creative, polished code that avoids generic AI aesthetics.
-license: Complete terms in LICENSE.txt
+description: Создавай выразительные фронтенд-интерфейсы производственного качества с высокими требованиями к дизайну. Используй этот скилл, когда пользователь просит создать веб-компонент, страницу или приложение. Генерируй творческий, проработанный код без шаблонной «ИИ-эстетики».
+license: Полные условия — в LICENSE.txt
 ---
 
-This skill guides creation of distinctive, production-grade frontend interfaces that avoid generic "AI slop" aesthetics. Implement real working code with exceptional attention to aesthetic details and creative choices.
+Этот скилл задаёт правила создания выразительных фронтенд-интерфейсов
+производственного качества, избегающих шаблонной «ИИ-эстетики» (генеричного
+«упоротого» дизайна). Пиши настоящий работающий код с исключительным вниманием
+к эстетическим деталям и творческим решениям.
 
-The user provides frontend requirements: a component, page, application, or interface to build. They may include context about the purpose, audience, or technical constraints.
+Пользователь описывает требования к фронтенду: компонент, страница, приложение
+или интерфейс. Может приложить контекст: цель проекта, аудитория, технические
+ограничения.
 
-## Design Thinking
+## Дизайн-мышление
 
-Before coding, understand the context and commit to a BOLD aesthetic direction:
-- **Purpose**: What problem does this interface solve? Who uses it?
-- **Tone**: Pick an extreme: brutally minimal, maximalist chaos, retro-futuristic, organic/natural, luxury/refined, playful/toy-like, editorial/magazine, brutalist/raw, art deco/geometric, soft/pastel, industrial/utilitarian, etc. There are so many flavors to choose from. Use these for inspiration but design one that is true to the aesthetic direction.
-- **Constraints**: Technical requirements (framework, performance, accessibility).
-- **Differentiation**: What makes this UNFORGETTABLE? What's the one thing someone will remember?
+Перед написанием кода пойми контекст и выбери СМЕЛЫЙ эстетический курс:
+- **Назначение**: какую задачу решает этот интерфейс? Кто им пользуется?
+- **Тон**: выбери крайность: брутальный минимализм, максималистский хаос,
+  ретрофутуризм, органический/природный, люкс/изысканность, игривость/игрушечность,
+  журнальный/редакционный стиль, брутализм/сырость, ар-деко/геометрия,
+  мягкий/пастельный, индустриальный/утилитарный и т.д. Вкусов огромное множество —
+  используй их как вдохновение, но дизайни тот, что верен выбранному курсу.
+- **Ограничения**: технические требования (фреймворк, производительность, доступность).
+- **Различимость**: что делает этот дизайн НЕЗАБЫВАЕМЫМ? Какая одна деталь
+  запомнится человеку?
 
-**CRITICAL**: Choose a clear conceptual direction and execute it with precision. Bold maximalism and refined minimalism both work - the key is intentionality, not intensity.
+**ВАЖНО**: выбери ясное концептуальное направление и исполни его точно.
+Смелый максимализм и выверенный минимализм одинаково работают — ключ в
+осознанности, а не в нагруженности.
 
-Then implement working code (HTML/CSS/JS, React, Vue, etc.) that is:
-- Production-grade and functional
-- Visually striking and memorable
-- Cohesive with a clear aesthetic point-of-view
-- Meticulously refined in every detail
+Затем напиши работающий код (HTML/CSS/JS, React, Vue и т.д.), который:
+- Готов к продакшену и функционален
+- Визуально яркий и запоминающийся
+- Целостный, с чёткой эстетической точкой зрения
+- Отточен до мелочей
 
-## Frontend Aesthetics Guidelines
+## Рекомендации по эстетике фронтенда
 
-Focus on:
-- **Typography**: Choose fonts that are beautiful, unique, and interesting. Avoid generic fonts like Arial and Inter; opt instead for distinctive choices that elevate the frontend's aesthetics; unexpected, characterful font choices. Pair a distinctive display font with a refined body font.
-- **Color & Theme**: Commit to a cohesive aesthetic. Use CSS variables for consistency. Dominant colors with sharp accents outperform timid, evenly-distributed palettes.
-- **Motion**: Use animations for effects and micro-interactions. Prioritize CSS-only solutions for HTML. Use Motion library for React when available. Focus on high-impact moments: one well-orchestrated page load with staggered reveals (animation-delay) creates more delight than scattered micro-interactions. Use scroll-triggering and hover states that surprise.
-- **Spatial Composition**: Unexpected layouts. Asymmetry. Overlap. Diagonal flow. Grid-breaking elements. Generous negative space OR controlled density.
-- **Backgrounds & Visual Details**: Create atmosphere and depth rather than defaulting to solid colors. Add contextual effects and textures that match the overall aesthetic. Apply creative forms like gradient meshes, noise textures, geometric patterns, layered transparencies, dramatic shadows, decorative borders, custom cursors, and grain overlays.
+Фокус на:
+- **Типографика**: выбирай шрифты красивые, уникальные, интересные. Избегай
+  генерических Arial и Inter; выбирай характерные, неожиданные шрифты,
+  поднимающие эстетику. Сочетай выразительный дисплейный шрифт с
+  изысканным текстовым.
+- **Цвет и тема**: держись цельной эстетики. Используй CSS-переменные для
+  согласованности. Доминирующие цвета с резкими акцентами работают лучше,
+  чем робкие равномерно-размазанные палитры.
+- **Движение**: анимации для эффектов и микро-взаимодействий. Для HTML —
+  только CSS-решения. Для React — библиотека Motion, если доступна. Фокус на
+  мощных моментах: одна хорошо поставленная загрузка страницы с каскадным
+  проявлением (animation-delay) дарит больше радости, чем рассыпанные
+  микро-взаимодействия. Используй прокрутку-триггеры и неожиданные hover-состояния.
+- **Пространственная композиция**: неожиданные раскладки. Асимметрия. Наложение.
+  Диагональное движение. Элементы, ломающие сетку. Щедрый «воздух» ИЛИ
+  управляемая плотность.
+- **Фоны и визуальные детали**: создавай атмосферу и глубину вместо дефолтных
+  заливок. Добавляй контекстные эффекты и текстуры, отвечающие общей эстетике:
+  градиентные сетки, шумовые текстуры, геометрические паттерны, слоистую
+  прозрачность, драматичные тени, декоративные рамки, кастомные курсоры, зернистость.
 
-NEVER use generic AI-generated aesthetics like overused font families (Inter, Roboto, Arial, system fonts), cliched color schemes (particularly purple gradients on white backgrounds), predictable layouts and component patterns, and cookie-cutter design that lacks context-specific character.
+НИКОГДА не используй генерическую «ИИ-эстетику»: заезженные шрифтовые семейства
+(Inter, Roboto, Arial, системные), клишированные цветовые схемы (особенно
+фиолетовые градиенты на белом), предсказуемые раскладки и шаблонные компоненты,
+безликий дизайн без характера контекста.
 
-Interpret creatively and make unexpected choices that feel genuinely designed for the context. No design should be the same. Vary between light and dark themes, different fonts, different aesthetics. NEVER converge on common choices (Space Grotesk, for example) across generations.
+Трактуй творчески и делай неожиданный выбор, выглядящий по-настоящему
+осмысленным для данного контекста. Не бывает двух одинаковых дизайнов.
+Чередуй светлые и тёмные темы, разные шрифты, разные эстетики. НИКОГДА
+не сходись на общих решениях (например, Space Grotesk) в разных проектах.
 
-**IMPORTANT**: Match implementation complexity to the aesthetic vision. Maximalist designs need elaborate code with extensive animations and effects. Minimalist or refined designs need restraint, precision, and careful attention to spacing, typography, and subtle details. Elegance comes from executing the vision well.
+**ВАЖНО**: соразмеряй сложность реализации эстетическому замыслу. Максималистский
+дизайн требует проработанного кода с обширными анимациями и эффектами.
+Минималистский или изысканный — сдержанности, точности и внимательности к
+отбивкам, типографике и тонким деталям. Элегантность рождается из исполнения
+замысла.
 
-Remember: You are is capable of extraordinary creative work. Don't hold back, show what can truly be created when thinking outside the box and committing fully to a distinctive vision.
+Помни: ты способен на выдающуюся творческую работу. Не сдерживайся — покажи,
+что можно создать, мысленно выходя за рамки и полностью следуя отличительному
+видению.
