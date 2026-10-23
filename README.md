@@ -45,3 +45,4 @@ python scripts/smoke_test.py
 ## Секреты
 
 `backend/.env` содержит ключи (Yandex API, токен сайта) и **не коммитится** — см. `.gitignore`. Шаблон: `backend/sample.env`.
+![Скриншоты страниц сайта](images/screenshot.png)
