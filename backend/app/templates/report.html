@@ -68,6 +68,17 @@
     background: #F2F5F8; border-radius: 2mm;
     font-size: 8.5pt; color: #5d7185;
   }
+  .video-cta {
+    margin-top: 8mm; padding: 4mm 5mm;
+    background: #F6F1E8; border: 1pt solid #C8922A; border-radius: 2mm;
+    page-break-inside: avoid;
+  }
+  .video-cta p { margin: 0 0 2mm; font-size: 9.5pt; color: #1b2a3a; }
+  .video-cta a {
+    display: inline-block; padding: 2.5mm 5mm;
+    background: #C8922A; color: #ffffff; text-decoration: none;
+    border-radius: 1.5mm; font-weight: 600; font-size: 9.5pt;
+  }
 </style>
 </head>
 <body>
@@ -82,6 +93,14 @@
 </div>
 
 {{ body }}
+
+{% if video_demo_url %}
+<div class="video-cta">
+  <p>Каждый ИИ-агент, рекомендованный в этом отчёте, работает на реальных задачах —
+  посмотрите видеозаписи демонстрации, чтобы понять, что именно он возьмёт на себя в вашей компании.</p>
+  <a href="{{ video_demo_url }}" target="_blank" rel="noopener">🎬 Смотреть видео-демонстрацию агентов</a>
+</div>
+{% endif %}
 
 <div class="disclaimer">
   Настоящий отчёт носит информационно-рекомендательный характер и не является

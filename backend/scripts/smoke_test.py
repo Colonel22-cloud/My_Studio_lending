@@ -26,8 +26,12 @@ SITE = "http://localhost:5500"
 TOKEN = ""
 STAMP = str(int(time.time()))           # уникальная метка прогона
 SESSION = f"smoke-{STAMP}"
-IP = "203.0.113.7"                      # базовый тестовый IP (RFC 5737)
-IP2, IP3 = "203.0.113.8", "203.0.113.9"  # соседние — у каждого теста свой лимит
+# Тестовые IP (RFC 5737). Каждому прогону — свой адрес, чтобы лимиты
+# rate-limit предыдущего прогона не портили следующий (окно — 1 час).
+_BASE_IP = 1 + (int(STAMP) % 125) * 2     # три подряд адреса на прогон (≤ 251)
+IP  = f"203.0.113.{_BASE_IP}"             # базовый тестовый IP
+IP2 = f"203.0.113.{_BASE_IP + 1}"         # соседние — у каждого теста свой лимит
+IP3 = f"203.0.113.{_BASE_IP + 2}"
 
 results: list[tuple[bool, str]] = []
 SMOKE_REPORT_ID = ""   # report_id тестового квиза (для чистки)
@@ -143,7 +147,7 @@ def main() -> None:
         bad = [p for p in pages if httpx.get(f"{SITE}/{p}", timeout=10).status_code != 200]
         check("сайт: 6 страниц открываются", not bad, ", ".join(bad))
         html = httpx.get(f"{SITE}/index.html", timeout=10).text
-        check("сайт: актуальная версия (v=3)", "?v=3" in html, "кэш-бустинг ?v=3")
+        check("сайт: актуальная версия (v=5)", "main.js?v=5" in html, "кэш-бустинг ?v=5")
         check("сайт: favicon подключён", 'assets/favicon.png' in html)
         check("сайт: honeypot в разметке", 'hp-website' in httpx.get(f"{SITE}/contacts.html", timeout=10).text)
     except Exception as e:  # noqa: BLE001

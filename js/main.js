@@ -15,6 +15,15 @@ const API = {
   token: 'a5e2576b3773702f6bd8e098cf7e1db9726111f044c4819a1eaf602632c26e6c',
 };
 
+// ============================================================
+// Видео-демонстрация работы ИИ-агентов (показывается после отчёта квиза)
+// TODO: после записи видео заменить на реальный адрес
+//   например: https://<ваш-домен>/video/agents-demo.html
+// Ссылка-заглушка ниже — вернёт 404 до записи видео.
+// Дубль в бэкенде: backend/.env → VIDEO_DEMO_URL (шаблон отчёта).
+// ============================================================
+const VIDEO_DEMO_URL = 'https://ВАШ-ДОМЕН/video/agents-demo';
+
 async function apiPost(path, payload) {
   if (!API.base) return null; // оффлайн-режим
   const resp = await fetch(`${API.base}${path}`, {
@@ -379,6 +388,8 @@ function renderQuiz(quiz) {
             <span id="q-score-txt" style="margin-left:10px"></span>
           </div>
         </div>
+        <p class="quiz-ty-note">Для агентов, рекомендованных в вашем отчёте, записаны видеодемонстрации — посмотрите, как они работают на реальных задачах.</p>
+        <a class="btn btn--amber" href="${VIDEO_DEMO_URL}" target="_blank" rel="noopener">🎬 Смотреть видео-демонстрацию агентов</a>
         <button class="btn btn--outline" onclick="closeQuiz()" style="margin-top:8px">Закрыть</button>
       </div>
     </div>

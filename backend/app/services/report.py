@@ -111,6 +111,7 @@ async def build_and_save_pdf(
         "client_name": data.get("name") or "",
         "client_email": data.get("email", ""),
         "report_id": report_id,
+        "video_demo_url": settings.video_demo_url,
     })
     out = REPORTS_DIR / f"{report_id}.pdf"
     return html_to_pdf(html, out)

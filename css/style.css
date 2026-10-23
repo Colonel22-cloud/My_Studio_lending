@@ -1449,6 +1449,11 @@ p  { line-height: 1.75; }
   color: var(--amber);
   font-weight: 700;
 }
+.quiz-ty-note {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 16px 0 12px;
+}
 
 /* ===== Chatbot ===== */
 .chatbot {
